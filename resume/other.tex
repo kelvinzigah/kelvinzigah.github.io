@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.65in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{times}
+
+% Defining colors
+\definecolor{linkblue}{RGB}{0, 102, 204}
+
+% Customizing section headers
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Setting up hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+}
+
+% Removing page numbers
+\pagestyle{empty}
+
+% Customizing itemize for tight bullet points
+\setlist[itemize]{leftmargin=*, itemsep=-1pt, topsep=0pt}
+
+\begin{document}
+
+% Header with contact info
+\begin{center}
+    {\LARGE\bfseries Kelvin Zigah} \\[0.15cm]
+    \href{mailto:kzeezigah@gmail.com}{kzeezigah@gmail.com} $\mid$
+    \href{https://www.linkedin.com/in/kelvinzigah/}{linkedin.com/in/kelvinzigah} $\mid$
+    \href{https://github.com/kelvinzigah}{github.com/kelvinzigah} $\mid$
+    (514) 778-4429
+\end{center}
+
+% Education Section
+\section*{Education}
+\textbf{Bachelor of Electrical Engineering, Co-op} \hfill Expected May 2028 \\
+Concordia University, Montreal, QC \\
+Relevant Coursework: Computer Architecture, Digital Design, Continuous-Time Signal Analysis, Circuit Analysis
+
+% Experience Section
+\section*{Experience}
+\textbf{Optical Hardware Intern, Fonex Inc. } \hfill Present \\
+Montreal, QC
+\begin{itemize}
+    \item Designing tests of optical characteristics of SFP, SFP+, QSFP and XSFP modules
+    \item Designed a pipeline for the addition of DCM-FBG modules to the Passive component Portfolio of the company
+\end{itemize}
+\textbf{Lab Supervisor, IEEE Concordia} \hfill Sep 2024--Present \\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Led FPGA and circuit design workshops, troubleshooting with oscilloscopes and multimeters
+    \item Managed lab equipment and fostered collaboration for robotics projects
+\end{itemize}
+\textbf{Director of Projects, IEEE Concordia} \hfill Sep 2025--Present \\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Guided RISC-V CPU design projects to engage ECE students in ASIC design
+    \item Advised designs on magnetic encoder PCB to read position data and integrate over CAN-BUS in ROS2 for a 6-DOF robotic arm project
+\end{itemize}
+\textbf{GLV and Firmware Sub-Team, Concordia Formula Electric} \hfill Sep 2025--Present \\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Designing PCBs in Altium Designer for GLV systems in 2026 prototype car
+    \item Developing firmware for data acquisition via CAN-BUS, enhancing vehicle telemetry
+\end{itemize}
+
+% Projects Section
+\section*{Projects}
+\textbf{RISC-V CPU on Altera DE2-115 FPGA} \hfill Jan 2025--April 2025 \\
+IEEE Concordia | SystemVerilog, FPGA, Embedded Systems
+\begin{itemize}
+    \item Designed a multi-cycle RISC-V CPU with RV32I ISA in SystemVerilog, integrating UART/SPI/UDP for real-time data exchange
+    \item Verified with ModelSim and synthesized with Quartus, optimizing timing for embedded applications
+    \item Collaborating to add pipelining and hazard controls, targeting 6\% latency reduction
+\end{itemize}
+\textbf{STM32 PCB Design} \hfill Jul 2025 \\
+Personal | Altium Designer, LTSpice, STM32CubeIDE
+\begin{itemize}
+    \item Designed STM32-based MCU PCB in Altium, optimizing low-power circuitry for EMI compliance
+    \item Simulated in LTSpice and prototyped on perfboard, achieving stable power delivery
+    \item Integrated I2C/UART via STM32CubeIDE for sensor communication
+\end{itemize}
+\textbf{TSSI and RTM Indicator PCB Design} \hfill Ongoing \\
+Concordia Formula Electric | Altium Designer, LTSpice
+\begin{itemize}
+    \item Developed PCBs for TSSI and RTM lights on race car chassis, ensuring safety compliance
+    \item Simulated circuits in LTSpice to validate signal integrity and power efficiency
+    \item Collaborated with team to integrate with vehicle’s electrical system
+\end{itemize}
+
+% Skills Section
+\section*{Skills}
+\begin{itemize}
+    \item \textbf{Programming and Firmware:} C++, Python, SystemVerilog, Embedded C, CyberSecurity
+    \item \textbf{Tools:} Quartus Prime, ModelSim, Vivado, Altium Designer, LTSpice, Git, Linux, AutoCad
+    \item \textbf{Hardware:} FPGA, Analog Circuits, Digital Design, ARM Assembly
+    \item \textbf{Soft Skills:} Leadership, Teamwork, Communication, Adaptability, Hardwork
+\end{itemize}
+
+\end{document}

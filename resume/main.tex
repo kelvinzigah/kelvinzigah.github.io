@@ -1,0 +1,111 @@
+% Setting up document with standard article class and geometry for margins
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.65in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{times}
+
+% Defining colors for subtle accents
+\definecolor{linkblue}{RGB}{0, 102, 204}
+
+% Customizing section headers with bold and horizontal rule
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Setting up hyperlinks with blue color
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+}
+
+% Removing page numbers
+\pagestyle{empty}
+
+% Customizing itemize for tight, clean bullet points
+\setlist[itemize]{leftmargin=*, itemsep=0pt, topsep=1pt}
+
+\begin{document}
+
+% Header with name and contact info
+\begin{center}
+    {\LARGE\bfseries Kelvin Zigah} \\[0.15cm]
+    \href{mailto:kzeezigah@gmail.com}{Email} $\mid$
+    \href{https://www.linkedin.com/in/kelvinzigah/}{LinkedIn Profile} $\mid$
+    \href{https://github.com/kelvinzigah}{GitHub}   $\mid$
+    \href{https://kelvinzigah.github.io/}
+    {Portfolio Website}
+\end{center}
+
+% Experience Section (First)
+\section*{Experience}
+\textbf{Lab Supervisor, IEEE Concordia} \hfill Sep 2024--Present \\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Led circuit design and FPGA workshops, troubleshooting microcontroller and power electronics circuits with oscilloscopes and multimeters, enhancing practical automation skills
+    \item Managed lab equipment and fostered collaboration among IEEE members for robotics projects
+\end{itemize}
+
+\textbf{Director of Projects, IEEE Concordia} \hfill Present \\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Researching practical designs and applications for RISC-V CPU to get students in ECE interested in ASIC design
+    \item Advising strategies for a magnetic encoder PCB for a 6-DOF robotic arm project led by other teams at IEEE
+\end{itemize}
+
+\textbf{GLV and Firmware sub-team, Concordia Formula Electric} \hfill Present\\
+Concordia University, Montreal, QC
+\begin{itemize}
+    \item Designing PCBs in Altium Designer for GLV sub-systems for the 2026 Prototype car to be tested in March.
+    \item Learning fundamental concepts in building electronics and firmware designs for data acquisition on an electric vehicle via CAN-BUS.
+\end{itemize}
+
+
+% Projects Section (Second)
+\section*{Projects}
+\textbf{STM32 PCB design} \hfill July 2025 \\
+Personal | Analog Circuit Design, Altium Designer, LTSpice, STM32CubeIDE
+\begin{itemize}
+    \item Designed an STM32-based MCU PCB in Altium Designer with low power circuitry using industry standards and practices for EMI regulation
+    \item Simulated power circuitry in LTSpice and prototyped with through-hole components on a perfboard
+    \item Integrated I2C and UART busses via the STM32CubeIDE
+\end{itemize}
+
+\textbf{RISC-V CPU on Altera DE2-115 FPGA} \hfill Jan 2025--Present \\
+IEEE Concordia | SystemVerilog, FPGA, Embedded Systems
+\begin{itemize}
+    \item Designed a multi-cycle RISC-V CPU with RV32I ISA in SystemVerilog, integrating UART/SPI for real-time data exchange and enhancing embedded control capabilities
+    \item Verified design with ModelSim and synthesized with Quartus, achieving optimized timing for real-time applications
+    \item Programmed on Altera DE2-115 FPGA board, achieving responsive, real-time digital display control for practical
+applications, currently integrating pipelining and hazard/interrupt controls
+\end{itemize}
+
+\textbf{TSSI and RTM indicator PCB design} \hfill Ongoing \\
+Concordia Formula Electric | Analog Circuit Design, Altium Designer, LTSpice
+\begin{itemize}
+    \item Developing PCBs for the TSSI indicator and ready-to-move lights on the main chassis of the race car
+\end{itemize}
+
+% Skills Section (Third)
+\section*{Skills}
+\begin{itemize}
+    \item \textbf{Hardware:} FPGA design, Analog Circuits, Digital Design, ARM Assembly, Firmware
+    \item \textbf{Programming:} C++, Python, SystemVerilog, Embedded C
+    \item \textbf{Tools:} Quartus Prime, ModelSim, LTSpice, Altium Designer, Vivado, Git, Linux
+    \item \textbf{Soft Skills:} Leadership, Teamwork, Communication
+\end{itemize}
+
+% Education Section (Last)
+\section*{Education}
+\textbf{Bachelor of Electrical Engineering, Co-op} \hfill Expected May 2028 \\
+Concordia University, Montreal, QC \\
+Relevant Coursework: Computer Architecture, Digital Design, Circuit Analysis, Signals \& Systems \\
+GPA: 3.3
+
+\end{document}
