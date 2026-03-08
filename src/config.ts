@@ -39,7 +39,7 @@ export const siteConfig = {
       name: "RISC-V CPU on Altera DE2-115 FPGA",
       description:
         "Designed a multi-cycle RISC-V CPU with RV32I ISA in SystemVerilog, with UART/SPI integration for real-time data exchange. Verified with ModelSim, synthesized with Quartus, and programmed on an Altera DE2-115 FPGA board. Currently integrating pipelining and hazard/interrupt controls.",
-      link: "",
+      link: "https://github.com/kelvinzigah/RISC_V_Single_Cycle_Processor",
       skills: ["SystemVerilog", "Quartus Prime", "ModelSim", "FPGA"],
     },
     {
@@ -52,12 +52,24 @@ export const siteConfig = {
   ],
   experience: [
     {
+      company: "Fonex Data Systems",
+      title: "Optical Hardware Intern",
+      dateRange: "Sep 2025 - Present",
+      bullets: [
+        "Developed and executed test procedures for SFP, SFP+, and QSFP optical transceivers using BERT equipment, network switches, and variable optical attenuators to validate signal integrity and compliance",
+        "Diagnosed and resolved configuration issues on Cisco and Nokia network switches, including VLAN provisioning and MAC address management",
+        "Identified and engaged international suppliers to expand the company's passive product portfolio with fibre Bragg grating dispersion compensation (FBG-DCM) modules",
+        "Developed Python automation scripts to reprogram EEPROM firmware on optical transceiver modules and automate data logging into structured Excel reports",
+      ],
+    },
+    {
       company: "IEEE Concordia",
       title: "Director of Projects",
       dateRange: "Present",
       bullets: [
         "Researching practical designs and applications for a RISC-V CPU to engage ECE students in ASIC design",
         "Advising strategies for a magnetic encoder PCB for a 6-DOF robotic arm project led by other IEEE teams",
+        "Leading a team of 8 to design a BMS PCB for a 40A battery pack for the IEEE Ebike Project team",
       ],
     },
     {
