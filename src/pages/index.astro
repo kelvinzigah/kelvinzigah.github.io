@@ -10,7 +10,7 @@ import { siteConfig } from "../config";
 import "../styles/global.css";
 ---
 
-<html lang="en">
+<html lang="en" style={`--accent-color: ${siteConfig.accentColor}`}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,20 +20,40 @@ import "../styles/global.css";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
   <body>
+    <div class="loading-screen" aria-hidden="true">
+      <div class="loading-card">
+        <div class="loading-spinner">
+          <span></span>
+        </div>
+        <p class="loading-kicker">Matchmaking</p>
+        <p class="loading-title">Joining Lobby...</p>
+        <div class="loading-bar">
+          <span></span>
+        </div>
+      </div>
+    </div>
     <Header />
-    <section>
+    <main>
       <Hero />
       <About />
       <Projects />
       <Experience />
       <Education />
-    </section>
+    </main>
     <Footer />
+
+    <script>
+      window.addEventListener("load", () => {
+        window.setTimeout(() => {
+          document.querySelector(".loading-screen")?.classList.add("is-hidden");
+        }, 1100);
+      });
+    </script>
   </body>
 </html>

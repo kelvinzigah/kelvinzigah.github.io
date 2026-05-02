@@ -2,39 +2,44 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900"
-        >
-          About Me
-        </h2>
-        <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
+<section id="about" class="hud-section">
+  <div class="hud-shell grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+    <div class="space-y-4">
+      <p class="hud-kicker">Player File</p>
+      <h2 class="hud-section-title">Profile</h2>
+      <div class="hud-panel p-5">
+        <div class="flex items-center justify-between border-b border-cyan-300/25 pb-4">
+          <span class="text-xs font-black uppercase tracking-[0.16em] text-cyan-200">Power Level</span>
+          <span class="text-4xl font-black text-yellow-200">02</span>
         </div>
-      </div>
-
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
-          {siteConfig.aboutMe}
+        <p class="mt-4 text-sm font-bold uppercase leading-relaxed text-cyan-100">
+          EE undergrad building embedded, FPGA, PCB, and automation systems with a hands-on lab mindset.
         </p>
-
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
-          </div>
-        </div>
       </div>
+    </div>
+
+    <div class="hud-panel p-5 sm:p-7 md:p-8">
+      <p class="text-lg leading-relaxed text-cyan-50 md:text-xl">
+        {siteConfig.aboutMe}
+      </p>
+
+      {
+        siteConfig.skills && siteConfig.skills.length > 0 && (
+          <div class="mt-8">
+            <div class="mb-4 flex items-center justify-between gap-4 border-b border-cyan-300/25 pb-3">
+              <h3 class="text-xl font-black uppercase text-white">Loadout Skills</h3>
+              <span class="text-xs font-black uppercase tracking-[0.16em] text-yellow-200">
+                {siteConfig.skills.length} Equipped
+              </span>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              {siteConfig.skills.map((skill) => (
+                <span class="loadout-chip">{skill}</span>
+              ))}
+            </div>
+          </div>
+        )
+      }
     </div>
   </div>
 </section>

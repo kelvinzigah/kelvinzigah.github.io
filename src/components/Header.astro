@@ -6,28 +6,33 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
-<header
-  id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
->
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
+<header id="header" class="fixed left-0 right-0 top-0 z-50 px-3 py-3 transition-all duration-300 md:px-6">
+  <nav
+    class="mx-auto flex max-w-7xl items-center justify-between gap-3 border-2 border-cyan-300/35 bg-[#061327]/80 px-3 py-2 shadow-[0_14px_40px_rgba(0,0,0,0.32)] backdrop-blur-md md:px-5"
+  >
+    <a href="#hero" class="flex min-w-0 items-center gap-3">
+      <span
+        class="flex h-10 w-10 shrink-0 items-center justify-center border-2 border-yellow-300 bg-cyan-300 text-lg font-black text-[#061327] shadow-[4px_4px_0_#ff8a1f]"
+      >
+        KZ
+      </span>
+      <span class="hidden min-w-0 flex-col leading-tight sm:flex">
+        <span class="truncate text-sm font-black uppercase text-white">{siteConfig.name}</span>
+        <span class="truncate text-xs font-bold uppercase text-cyan-200">Lobby Ready</span>
+      </span>
+    </a>
+
+    <ul class="flex items-center gap-1 text-[0.68rem] font-black uppercase tracking-[0.08em] text-cyan-100 sm:text-xs md:gap-2">
       <li>
-        <a
-          href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
-        >
-          About
+        <a href="#about" class="block border border-transparent px-2 py-2 transition hover:border-cyan-300 hover:bg-cyan-300/10 md:px-3">
+          Profile
         </a>
       </li>
       {
         hasProjects && (
           <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Projects
+            <a href="#projects" class="block border border-transparent px-2 py-2 transition hover:border-cyan-300 hover:bg-cyan-300/10 md:px-3">
+              Quests
             </a>
           </li>
         )
@@ -35,11 +40,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       {
         hasExperience && (
           <li>
-            <a
-              href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Experience
+            <a href="#experience" class="block border border-transparent px-2 py-2 transition hover:border-cyan-300 hover:bg-cyan-300/10 md:px-3">
+              Missions
             </a>
           </li>
         )
@@ -47,11 +49,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       {
         hasEducation && (
           <li>
-            <a
-              href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Education
+            <a href="#education" class="block border border-transparent px-2 py-2 transition hover:border-cyan-300 hover:bg-cyan-300/10 md:px-3">
+              Academy
             </a>
           </li>
         )
@@ -63,16 +62,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 <script>
   window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
-    }
+    header?.classList.toggle("py-1", window.scrollY > 80);
+    header?.classList.toggle("py-3", window.scrollY <= 80);
   });
 </script>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
