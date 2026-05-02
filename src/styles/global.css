@@ -1,13 +1,25 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: "Rajdhani", sans-serif;
+  --font-comic: "Bangers", cursive;
+  --color-archive-black: #05070c;
+  --color-archive-navy: #071226;
+  --color-archive-paper: #f7fbff;
+  --color-electric-cyan: #20e7ff;
+  --color-signal-yellow: #f8d94a;
+  --color-warning-orange: #ff8a1f;
+  --color-solder-green: #36f29a;
+}
+
 :root {
   color-scheme: dark;
-  --lobby-bg: #071226;
+  --lobby-bg: #05070c;
   --lobby-ink: #f7fbff;
   --lobby-muted: #9fc4d7;
   --lobby-cyan: #20e7ff;
   --lobby-blue: #2478ff;
-  --lobby-yellow: #ffe64d;
+  --lobby-yellow: #f8d94a;
   --lobby-orange: #ff8a1f;
   --panel: rgba(8, 24, 50, 0.86);
   --panel-solid: #0d2449;
@@ -26,9 +38,9 @@ body {
   font-family: "IBM Plex Mono", monospace;
   color: var(--lobby-ink);
   background:
-    radial-gradient(circle at 12% 8%, rgba(32, 231, 255, 0.24), transparent 28rem),
-    radial-gradient(circle at 84% 16%, rgba(255, 138, 31, 0.22), transparent 24rem),
-    linear-gradient(135deg, #061022 0%, #0b2c5a 45%, #09203d 100%);
+    radial-gradient(circle at 12% 8%, rgba(32, 231, 255, 0.16), transparent 28rem),
+    radial-gradient(circle at 84% 16%, rgba(248, 217, 74, 0.13), transparent 24rem),
+    linear-gradient(135deg, #05070c 0%, #071226 48%, #120d1f 100%);
 }
 
 body::before {
@@ -162,6 +174,112 @@ a {
 .hud-shell {
   width: min(1180px, calc(100% - 2rem));
   margin-inline: auto;
+}
+
+.comic-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--lobby-yellow);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.comic-kicker::before {
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: var(--lobby-orange);
+  border: 2px solid var(--lobby-yellow);
+  transform: skew(-12deg) rotate(6deg);
+  box-shadow: 0 0 22px rgba(248, 217, 74, 0.55);
+}
+
+.comic-title {
+  color: var(--lobby-ink);
+  font-family: "Bangers", cursive;
+  font-size: clamp(4.7rem, 11vw, 10.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.78;
+  text-transform: uppercase;
+  text-shadow:
+    0.05em 0.05em 0 #05070c,
+    0.085em 0.085em 0 rgba(248, 217, 74, 0.92);
+}
+
+.comic-button {
+  display: inline-flex;
+  min-height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.3rem;
+  color: #05070c;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, var(--lobby-yellow), var(--lobby-orange));
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 7px 0 #7b3400, 0 18px 32px rgba(255, 138, 31, 0.22);
+  transform: skew(-8deg);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.comic-button > span {
+  transform: skew(8deg);
+}
+
+.comic-button:hover,
+.comic-button:focus-visible {
+  box-shadow: 0 4px 0 #7b3400, 0 14px 30px rgba(255, 138, 31, 0.32);
+  outline: none;
+  transform: skew(-8deg) translateY(3px);
+}
+
+.comic-button-secondary {
+  color: var(--lobby-ink);
+  background: rgba(32, 231, 255, 0.12);
+  border-color: rgba(32, 231, 255, 0.72);
+  box-shadow: 0 7px 0 rgba(32, 231, 255, 0.25), 0 18px 32px rgba(32, 231, 255, 0.12);
+}
+
+.comic-link {
+  color: rgba(247, 251, 255, 0.86);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(32, 231, 255, 0.34);
+  padding: 0.55rem 0.8rem;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.comic-link:hover,
+.comic-link:focus-visible {
+  color: var(--lobby-yellow);
+  background: rgba(248, 217, 74, 0.08);
+  border-color: var(--lobby-yellow);
+  outline: none;
+}
+
+.dossier-visual {
+  position: relative;
+  min-height: clamp(26rem, 58vw, 42rem);
+  overflow: hidden;
+  background: #10264d;
+  border: 3px solid rgba(247, 251, 255, 0.82);
+  box-shadow:
+    16px 16px 0 rgba(0, 0, 0, 0.45),
+    0 0 54px rgba(32, 231, 255, 0.18);
+  clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 32px 100%, 0 calc(100% - 32px));
 }
 
 .hud-section {
