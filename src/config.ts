@@ -29,6 +29,11 @@ export const siteConfig = {
   ],
   projects: [
     {
+      slug: "stm32-pcb-design",
+      shortName: "STM32 PCB",
+      category: "Embedded Hardware",
+      image: "/media/projects/stm32-pcb-design.svg",
+      fallbackTheme: "cyan",
       name: "STM32 PCB Design",
       description:
         "Designed an STM32-based MCU PCB in Altium Designer with low power circuitry using industry standards for EMI regulation. Simulated power circuitry in LTSpice, prototyped on a perfboard, and integrated I2C and UART buses via STM32CubeIDE.",
@@ -36,6 +41,12 @@ export const siteConfig = {
       skills: ["Altium Designer", "LTSpice", "STM32CubeIDE", "Embedded C"],
     },
     {
+      slug: "risc-v-cpu-fpga",
+      shortName: "RISC-V CPU",
+      category: "FPGA Architecture",
+      image: "/media/projects/risc-v-cpu-fpga.svg",
+      fallbackTheme: "amber",
+      repoLabel: "Processor repo",
       name: "RISC-V CPU on Altera DE2-115 FPGA",
       description:
         "Designed a multi-cycle RISC-V CPU with RV32I ISA in SystemVerilog, with UART/SPI integration for real-time data exchange. Verified with ModelSim, synthesized with Quartus, and programmed on an Altera DE2-115 FPGA board. Currently integrating pipelining and hazard/interrupt controls.",
@@ -43,6 +54,11 @@ export const siteConfig = {
       skills: ["SystemVerilog", "Quartus Prime", "ModelSim", "FPGA"],
     },
     {
+      slug: "tssi-rtm-indicator-pcb",
+      shortName: "TSSI / RTM",
+      category: "Formula EV Electronics",
+      image: "/media/projects/tssi-rtm-indicator-pcb.svg",
+      fallbackTheme: "orange",
       name: "TSSI and RTM Indicator PCB Design",
       description:
         "Developing PCBs for the TSSI indicator and ready-to-move lights on the main chassis of the Concordia Formula Electric race car.",

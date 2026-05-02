@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">TSSI and RTM indicator PCB placeholder visual</title>
+  <desc id="desc">A stylized Formula EV indicator board with orange safety lights and chassis signal traces.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b1604"/>
+      <stop offset="1" stop-color="#07152b"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx=".5" cy=".5" r=".55">
+      <stop offset="0" stop-color="#fff7ad"/>
+      <stop offset=".45" stop-color="#ff8a1f"/>
+      <stop offset="1" stop-color="#8d3d00"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="620" fill="url(#bg)"/>
+  <path d="M82 396c118-92 216-139 336-139h124c126 0 228 47 336 139" fill="none" stroke="#20e7ff" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"/>
+  <path d="M165 380h630l48 72H117z" fill="#0b2e5c" stroke="#ffffff" stroke-opacity=".75" stroke-width="5"/>
+  <g transform="translate(208 122)">
+    <path d="M32 0h480l32 32v212H0V32z" fill="#1f2937" stroke="#ffb14a" stroke-width="6"/>
+    <circle cx="140" cy="112" r="58" fill="url(#lamp)" stroke="#fff7ad" stroke-width="7"/>
+    <circle cx="404" cy="112" r="58" fill="url(#lamp)" stroke="#fff7ad" stroke-width="7"/>
+    <g stroke="#ffe64d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M140 170v40h264v-40"/>
+      <path d="M140 54V26h264v28"/>
+      <path d="M198 112h148"/>
+    </g>
+    <g fill="#061327" stroke="#a7f3d0" stroke-width="4">
+      <rect x="230" y="82" width="84" height="60"/>
+      <rect x="54" y="184" width="102" height="28"/>
+      <rect x="388" y="184" width="102" height="28"/>
+    </g>
+    <text x="272" y="122" fill="#ffffff" font-family="IBM Plex Mono, Consolas, monospace" font-size="26" font-weight="800" text-anchor="middle">GLV</text>
+    <text x="140" y="238" fill="#ffffff" font-family="IBM Plex Mono, Consolas, monospace" font-size="24" font-weight="800" text-anchor="middle">TSSI</text>
+    <text x="404" y="238" fill="#ffffff" font-family="IBM Plex Mono, Consolas, monospace" font-size="24" font-weight="800" text-anchor="middle">RTM</text>
+  </g>
+  <g fill="#ff8a1f">
+    <circle cx="178" cy="452" r="10"/>
+    <circle cx="782" cy="452" r="10"/>
+    <circle cx="480" cy="452" r="10"/>
+  </g>
+</svg>
