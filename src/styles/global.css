@@ -176,6 +176,17 @@ a {
   margin-inline: auto;
 }
 
+.hero-three-scene {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.78;
+  mix-blend-mode: screen;
+}
+
 .comic-kicker {
   display: inline-flex;
   align-items: center;
