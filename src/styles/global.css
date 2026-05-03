@@ -401,6 +401,7 @@ a {
   height: 13rem;
   content: "";
   background: radial-gradient(circle, rgba(255, 230, 77, 0.16), transparent 68%);
+  pointer-events: none;
 }
 
 .text-stroke {

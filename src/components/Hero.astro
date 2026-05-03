@@ -15,8 +15,7 @@ const socials = [
 
   <div class="hud-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 lg:grid-cols-[0.96fr_1.04fr]">
     <div class="relative z-10 max-w-3xl">
-      <p class="comic-kicker">Engineering dossier online</p>
-      <h1 class="comic-title mt-5">
+      <h1 class="comic-title">
         {siteConfig.name}
       </h1>
       <p class="mt-5 max-w-2xl font-display text-2xl font-bold uppercase leading-tight text-signal-yellow md:text-4xl">
@@ -28,7 +27,7 @@ const socials = [
 
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="#projects" class="comic-button"><span>Open Project Files</span></a>
-        <a href="#about" class="comic-button comic-button-secondary"><span>View Loadout</span></a>
+        <a href="#about" class="comic-button comic-button-secondary"><span>About Me</span></a>
       </div>
 
       {socials.length > 0 && (
@@ -57,14 +56,6 @@ const socials = [
         />
         <div class="absolute inset-0 bg-gradient-to-r from-archive-black/88 via-archive-black/25 to-transparent"></div>
         <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(32,231,255,0.16)_1px,transparent_1px),linear-gradient(rgba(32,231,255,0.12)_1px,transparent_1px)] bg-[size:42px_42px] opacity-55"></div>
-        <div class="absolute bottom-5 left-5 right-5 border-l-4 border-signal-yellow bg-archive-black/78 p-4 backdrop-blur-sm">
-          <p class="text-xs font-black uppercase tracking-[0.18em] text-electric-cyan">Current class</p>
-          <p class="mt-1 font-display text-2xl font-bold uppercase text-archive-paper">Hardware Systems Builder</p>
-        </div>
-      </div>
-      <div class="absolute -bottom-5 right-4 border-2 border-electric-cyan bg-archive-black px-4 py-3 shadow-[8px_8px_0_rgba(248,217,74,0.8)]">
-        <p class="text-xs font-black uppercase tracking-[0.16em] text-signal-yellow">Signal</p>
-        <p class="font-display text-xl font-bold uppercase text-archive-paper">Ready for review</p>
       </div>
     </div>
   </div>

@@ -32,7 +32,7 @@ export const siteConfig = {
       slug: "stm32-pcb-design",
       shortName: "STM32 PCB",
       category: "Embedded Hardware",
-      image: "/media/projects/stm32-pcb-design.svg",
+      image: "/media/ultrahd-buck-converter.jpg",
       fallbackTheme: "cyan",
       name: "STM32 PCB Design",
       description:
